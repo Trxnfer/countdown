@@ -9,15 +9,20 @@
 <body>
     <div class="overlay"></div>
 
-    <!-- MUSIC -->
-    <audio id="bgMusic" loop>
-        <source src="music.mp3" type="audio/mpeg">
-    </audio>
-    <button id="musicBtn" onclick="toggleMusic()">🔇 MUSIC</button>
+    <!-- BACKGROUND MUSIC -->
+    <iframe id="bgMusic" 
+            width="0" 
+            height="0" 
+            src="https://www.youtube.com/embed/6Z6-daOCLEU?autoplay=1&loop=1&playlist=6Z6-daOCLEU" 
+            frameborder="0" 
+            allow="autoplay">
+    </iframe>
+
+    <button id="musicBtn" onclick="toggleMusic()">🔊 MUSIC</button>
 
     <div class="container">
         <h1 class="title">NYC: THE TRENCHES</h1>
-        <p class="subtitle">PRESENTED TO YOU BY TRXNFER.</p>
+        <p class="subtitle">Presented to you by Trxnfer</p>
         
         <p class="releasing">RELEASING IN</p>
         
