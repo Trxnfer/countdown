@@ -1,6 +1,6 @@
 const releaseDate = new Date("August 3, 2026 00:00:00").getTime();
 
-/* countdown */
+/* Countdown */
 function updateCountdown() {
     const now = new Date().getTime();
     const distance = releaseDate - now;
@@ -10,28 +10,27 @@ function updateCountdown() {
     const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-    document.getElementById("days").innerText = days;
-    document.getElementById("hours").innerText = hours;
-    document.getElementById("minutes").innerText = minutes;
-    document.getElementById("seconds").innerText = seconds;
+    document.getElementById("days").innerText = String(days).padStart(2, '0');
+    document.getElementById("hours").innerText = String(hours).padStart(2, '0');
+    document.getElementById("minutes").innerText = String(minutes).padStart(2, '0');
+    document.getElementById("seconds").innerText = String(seconds).padStart(2, '0');
 }
 
 setInterval(updateCountdown, 1000);
 updateCountdown();
 
-/* MUSIC */
-const music = document.getElementById("bgMusic");
+/* Music */
+const musicFrame = document.getElementById("bgMusic");
 const btn = document.getElementById("musicBtn");
-
-let playing = false;
+let playing = true;
 
 function toggleMusic() {
     if (playing) {
-        music.pause();
-        btn.innerText = "🔇 Music";
+        musicFrame.src = "https://www.youtube.com/embed/6Z6-daOCLEU";
+        btn.innerText = "🔇 MUSIC";
     } else {
-        music.play();
-        btn.innerText = "🔊 Music";
+        musicFrame.src = "https://www.youtube.com/embed/6Z6-daOCLEU?autoplay=1&loop=1&playlist=6Z6-daOCLEU";
+        btn.innerText = "🔊 MUSIC";
     }
     playing = !playing;
 }
