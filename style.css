@@ -12,7 +12,7 @@ body {
 .overlay {
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.65);
+    background: rgba(0, 0, 0, 0.68);
     z-index: 1;
 }
 
@@ -22,98 +22,112 @@ body {
     text-align: center;
     top: 50%;
     transform: translateY(-50%);
+    padding: 15px;
 }
 
+/* Title */
 .title {
-    font-size: 72px;
-    letter-spacing: 6px;
+    font-size: 48px; /* smaller on mobile */
+    letter-spacing: 4px;
     color: #ff2222;
-    text-shadow: 0 0 30px #ff0000;
+    text-shadow: 0 0 25px #ff0000;
+    margin-bottom: 8px;
 }
 
 .subtitle {
-    font-size: 22px;
-    color: #ffdddd;
-    margin: 10px 0 40px 0;
-}
-
-.releasing {
     font-size: 18px;
-    letter-spacing: 4px;
-    color: #ff8888;
+    color: #ffdddd;
     margin-bottom: 30px;
 }
 
+.releasing {
+    font-size: 16px;
+    letter-spacing: 3px;
+    color: #ff8888;
+    margin-bottom: 25px;
+}
+
+/* Countdown */
 .countdown {
     display: flex;
     justify-content: center;
-    gap: 25px;
-    margin-bottom: 60px;
+    gap: 12px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
 }
 
 .box {
-    background: rgba(20, 0, 30, 0.75);
+    background: rgba(20, 0, 30, 0.85);
     border: 3px solid #ff3366;
     border-radius: 12px;
-    padding: 20px 25px;
-    width: 145px;
-    box-shadow: 0 0 25px #ff0000;
+    padding: 12px 18px;
+    width: 110px;
+    box-shadow: 0 0 20px #ff0000;
 }
 
 .box span {
-    font-size: 55px;
+    font-size: 38px;
     display: block;
 }
 
 .box label {
-    font-size: 13px;
+    font-size: 11px;
     color: #ffbbbb;
 }
 
-/* Fixed Bottom Buttons */
+/* Buttons */
 .buttons {
     display: flex;
     justify-content: center;
-    gap: 25px;
-    margin-top: 40px;
+    gap: 15px;
+    flex-wrap: wrap;
 }
 
 .btn {
-    padding: 18px 40px;
-    font-size: 18px;
+    padding: 16px 32px;
+    font-size: 16px;
     font-weight: bold;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     border: 3px solid #ff3366;
-    background: rgba(15, 5, 35, 0.9);
+    background: rgba(15, 5, 35, 0.95);
     color: white;
     cursor: pointer;
     border-radius: 8px;
-    box-shadow: 0 0 25px rgba(255, 50, 100, 0.7);
+    box-shadow: 0 0 20px rgba(255, 50, 100, 0.7);
     transition: all 0.3s;
     text-decoration: none;
     display: inline-flex;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
+    min-width: 160px;
+    justify-content: center;
 }
 
 .btn:hover {
     background: #ff3366;
     color: black;
-    transform: scale(1.08);
-    box-shadow: 0 0 35px #ff5555;
+    transform: scale(1.05);
 }
 
 /* Music Button */
 #musicBtn {
     position: absolute;
-    top: 25px;
-    right: 25px;
-    padding: 12px 20px;
+    top: 15px;
+    right: 15px;
+    padding: 10px 16px;
     background: rgba(0,0,0,0.8);
     border: 2px solid #ff3366;
     color: white;
     border-radius: 8px;
     cursor: pointer;
     z-index: 10;
+    font-size: 14px;
     font-weight: bold;
+}
+
+/* Make it better on very small screens */
+@media (max-width: 480px) {
+    .title { font-size: 42px; }
+    .box { width: 95px; padding: 10px 12px; }
+    .box span { font-size: 32px; }
 }
