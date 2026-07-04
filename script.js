@@ -1,20 +1,9 @@
 const releaseDate = new Date("August 3, 2026 00:00:00").getTime();
 
-const btn = document.getElementById("playBtn");
-
+/* countdown */
 function updateCountdown() {
     const now = new Date().getTime();
     const distance = releaseDate - now;
-
-    if (distance <= 0) {
-        document.querySelector(".countdown").innerHTML =
-            "<h2>🚨 GAME IS NOW LIVE 🚨</h2>";
-
-        btn.classList.remove("disabled");
-        btn.textContent = "Play Now on Roblox";
-        btn.href = "https://www.roblox.com"; // replace with your game link
-        return;
-    }
 
     const days = Math.floor(distance / (1000 * 60 * 60 * 24));
     const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
@@ -27,5 +16,22 @@ function updateCountdown() {
     document.getElementById("seconds").innerText = seconds;
 }
 
-updateCountdown();
 setInterval(updateCountdown, 1000);
+updateCountdown();
+
+/* MUSIC */
+const music = document.getElementById("bgMusic");
+const btn = document.getElementById("musicBtn");
+
+let playing = false;
+
+function toggleMusic() {
+    if (playing) {
+        music.pause();
+        btn.innerText = "🔇 Music";
+    } else {
+        music.play();
+        btn.innerText = "🔊 Music";
+    }
+    playing = !playing;
+}
