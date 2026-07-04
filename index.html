@@ -6,35 +6,34 @@
     <title>NYC: The Trenches</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+    <div class="overlay"></div>
 
-<div class="overlay"></div>
+    <!-- MUSIC -->
+    <audio id="bgMusic" loop>
+        <source src="music.mp3" type="audio/mpeg">
+    </audio>
+    <button id="musicBtn" onclick="toggleMusic()">🔇 MUSIC</button>
 
-<!-- MUSIC -->
-<audio id="bgMusic" loop>
-    <source src="music.mp3" type="audio/mpeg">
-</audio>
+    <div class="container">
+        <h1 class="title">NYC: THE TRENCHES</h1>
+        <p class="subtitle">PRESENTED TO YOU BY TRXNFER.</p>
+        
+        <p class="releasing">RELEASING IN</p>
+        
+        <div class="countdown">
+            <div class="box"><span id="days">00</span><label>DAYS</label></div>
+            <div class="box"><span id="hours">00</span><label>HOURS</label></div>
+            <div class="box"><span id="minutes">00</span><label>MINUTES</label></div>
+            <div class="box"><span id="seconds">00</span><label>SECONDS</label></div>
+        </div>
 
-<button id="musicBtn" onclick="toggleMusic()">🔇 Music</button>
-
-<div class="container">
-
-    <h1 class="title">NYC: THE TRENCHES</h1>
-
-    <p class="subtitle">Presented to you by Trxnfer</p>
-
-    <p class="releasing">RELEASING IN</p>
-
-    <div class="countdown">
-        <div class="box"><span id="days">00</span><label>DAYS</label></div>
-        <div class="box"><span id="hours">00</span><label>HOURS</label></div>
-        <div class="box"><span id="minutes">00</span><label>MINUTES</label></div>
-        <div class="box"><span id="seconds">00</span><label>SECONDS</label></div>
+        <div class="buttons">
+            <button class="btn discord">🔗 JOIN THE DISCORD</button>
+            <button class="btn roblox">🎮 PLAY ON ROBLOX</button>
+        </div>
     </div>
 
-</div>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
